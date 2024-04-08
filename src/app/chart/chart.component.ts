@@ -24,7 +24,6 @@ export class ChartComponent implements OnInit, AfterContentInit {
   id: string | null  = '';
   chart: any = [];
   data: any = null;
-  today: any = {}
   
   labels: any = [];
   forecast: any = [];
@@ -63,13 +62,17 @@ export class ChartComponent implements OnInit, AfterContentInit {
         dayLabels.push(prop.name);
         dayTemp.push(prop.temperature);
       }
+      else{
 
-      nightTemp.push(prop.temperature);
+        nightTemp.push(prop.temperature);
+      }
     }
 
     this.forecast = dayTemp;
     this.labels = dayLabels;
     this.nigthForecast = nightTemp;
+    
+    console.log(dayTemp, nightTemp)
 
     return;
   }
