@@ -35,7 +35,7 @@ export class ChartComponent implements OnInit, AfterContentInit {
     private route: ActivatedRoute,
     private weatherService: WeatherService
   ) {}
-  
+  //coment
   ngOnInit(): void {
     this.getWeather();
   }
