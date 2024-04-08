@@ -1,0 +1,9 @@
+.chart{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    max-width: 1000px;
+}
+.canvas{
+    max-width: 100;
+}
