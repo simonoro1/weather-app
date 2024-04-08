@@ -63,7 +63,6 @@ export class ChartComponent implements OnInit, AfterContentInit {
         dayTemp.push(prop.temperature);
       }
       else{
-
         nightTemp.push(prop.temperature);
       }
     }
@@ -84,13 +83,13 @@ export class ChartComponent implements OnInit, AfterContentInit {
         datasets: [
           {
             type: 'line',
-            label: 'Day forecast',
+            label: 'Day forecast (05:00 - 00:00)',
             data: this.forecast,
             borderColor: ['rgb(231, 76, 60)'],
           },
           {
             type: 'line',
-            label: 'Night Forecast',
+            label: 'Night Forecast (00:00 - 05:00)',
             data: this.nigthForecast,
             borderColor: ['rgb(100, 149, 237)'],
           },
@@ -107,8 +106,8 @@ export class ChartComponent implements OnInit, AfterContentInit {
           },
         },
         plugins: {
-          tooltip: {
-            
+          legend: {
+            display:true,
           },
           title: {
             display: true,
